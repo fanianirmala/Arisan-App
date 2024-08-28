@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.box-area {
+    width: 930px;
+
+}
+.right-box {
+    padding: 40px 40px 40px 40px;
+}
+::placeholder {
+    font-size: 16px;
+}
+/* ------or------ */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #000;
+}
+/* form-input */
+form .login-input{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 20px 0;
+}
+.login-input input{
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+.login-input label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: .5s;
+}
+.login-input span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #2691d9;
+    transition: .5s;
+}
+.login-input input:focus ~ label,
+.login-input input:valid ~ label{
+    top: -5px;
+    color: #2691d9;
+}
+.login-input input:focus ~ span::before,
+.login-input input:valid ~ span::before{
+    width: 100%;
+}
+/* splash-screen */
+.splash{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #03346E;
+    z-index: 200;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.splash.display-none{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+.header.active {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.splash img {
+    max-width: 30%;
+    height: auto;
+}
+.spinner-border {
+    margin-top: 20px;
+}
+/* responsive splash-screen */
+@media (max-width: 768px) {
+    .splash {
+        padding-top: 15vh;
+    }
+    .splash img{
+        max-width: 50%;
+    }
+}
+@media (max-width: 480px) {
+    .splash {
+        padding-top: 10vh;
+    }
+    .splash img {
+        max-width: 70%;
+    }
+}
+/* responsive login-page */
+@media only screen and (max-width: 768px) {
+    .box-area {
+        margin: 0 10px;
+    }
+    .left-box {
+        height: 100px;
+        overflow: hidden;
+    }
+    .right-box {
+        padding: 20px;
+    }
+}
