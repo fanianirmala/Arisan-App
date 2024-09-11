@@ -26,10 +26,10 @@
                          <center>
                              <div class="header-text mb-4">
                                  <h2><b>Get Started</b></h2>
-                                 <p>Already have account? <a href="#" style="text-decoration: none;">Sign In</a></p>
+                                 <p>Already have account? <a href="{{ route('login') }}" style="text-decoration: none;">Sign In</a></p>
                              </div>
                          </center>
-                     <form method="POST">
+                     <form action="#" method="Post" >
                          <div class="login-input">
                            <input type="text" name="username" required>
                            <span></span>
@@ -40,15 +40,20 @@
                            <span></span>
                            <label>Email</label>
                          </div>
-                         <div class="login-input">
-                             <input type="password" name="password" required>
-                             <span></span>
-                             <label>Password</label>
-                           </div>
-                     </form>
-                         <div class="input-group mb-3">
-                             <button class="btn btn-lg w-100 fs-6" style="background-color: #03346E; color: #fff;">Sign Up</button>
-                         </div>
+                        <div class="login-input">
+                            <input type="password" name="password" required>
+                            <span></span>
+                            <label>Password</label>
+                        </div>
+                        <div class="login-input">
+                            <input type="password" name="confirmpassword" required>
+                            <span></span>
+                            <label>Confirm Password</label>
+                        </div>
+                        </form>
+                        <div class="input-group mb-3">
+                               <button class="btn btn-lg w-100 fs-6" style="background-color: #03346E; color: #fff;">Sign Up</button>
+                        </div>
                          <div class="divider">or</div>
                          <div class="button" style="text-align: center;">
                              <button class="btn shadow rounded-2"><img src="Assets/img/icon-google.png" style="width:40px;"></button>
