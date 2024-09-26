@@ -2,6 +2,7 @@
 
 @section('content')
 <link rel="stylesheet" href="css/event.css">
+<script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
 <div class="d-flex justify-content-between align-items-center">
     <h2>Event Arisan Baru</h2>
     <div>
@@ -86,7 +87,7 @@
             </div>
             <div class="card mb-4">
                 <div class="card-header">
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#descriptionCollapse">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#descriptionCollapse" style="text-decoration: none; color: #4F4F4F;">
                         Keterangan
                     </button>
                 </div>
