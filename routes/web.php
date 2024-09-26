@@ -1,16 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RouteController;
 
-Route::get('/', function () {
-    return view('login');
-})->name('login');
-Route::get('/event-arisan-baru', function () {
-    return view('event-arisan-baru');
-})->name('event-arisan-baru');
-Route::get('/register', function () {
-    return view('register');
-})->name('register');
-Route::get('/sidebar', function () {
-    return view('template.sidebar');
-})->name('sidebar');
+Route::get('/', [LoginController::class, 'index'])->name('login');
+Route::post('/postlogin', [LoginController::class, 'postlogin'])->name('postlogin');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/detailevent', [HomeController::class, 'detail'])->name('detailevent');
+Route::get('/event-arisan-baru', [RouteController::class, 'eventArisanBaru'])->name('event-arisan-baru');
+Route::get('/register', [RouteController::class, 'register'])->name('register');

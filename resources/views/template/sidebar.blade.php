@@ -21,6 +21,12 @@
                 {{-- sidebar navigation --}}
                 <ul class="sidebar-nav">
                     <li class="sidebar-item">
+                        <a href="{{ route('home') }}" class="sidebar-link">
+                            <i class="ti ti-list-details" style="color: #858585"></i>
+                            Event Arisan
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
                         <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#investasi"
                             aria-expanded="false" aria-controls="investasi">
                             <i class="ti ti-wallet" style="color: #858585;"></i>
@@ -28,7 +34,7 @@
                         </a>
                         <ul id="investasi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item" style="margin-left: 20px;">
-                                <a href="#" class="sidebar-link"><i class="fa-solid fa-arrow-right"></i></i> Sub Menu?</a>
+                                <a href="#" class="sidebar-link"><i class="ti ti-users-group" style="color: #858585"></i> Daftar User</a>
                             </li>
                         </ul>
                     </li>
@@ -51,6 +57,14 @@
                         </a>
                     </li>
                 </ul>
+                <div class="sidebar-footer">
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link" style="color: red;">
+                            <i class="ti ti-logout-2" style="color: red"></i>
+                            Logout
+                        </a>
+                    </li>
+                </div>
             </div>
         </aside>
         <!-- Main Component -->
@@ -61,18 +75,27 @@
                 </button>
                 <div class="con" style="display: flex">
                     <div class="name" style="margin-top: 10px; margin-right: 20px;">
-                        <h6>Fania Nirmala</h6>
+                        <h6>
+                            @auth
+                                {{ Auth::user()->name }}
+                            @endauth
+                        </h6>
                     </div>
-                    <div class="img">
-                        <img src="Assets/img/profile-user.png" style="width: 30px">
-                        <button class="btn"><img src="Assets/img/down-arrow.png" style="width: 20px;"></button>
+                    <div class="img d-flex">
+                        <img src="Assets/img/profile-user.png" style="width: 40px;">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownProfile" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownProfile">
+                                <li><a class="dropdown-item" href="#">View Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </nav>
             <main class="content px-3 py-2">
                 <div class="container-fluid">
                     <div class="mb-3">
-                        <br>
                         @yield('content')
                     </div>
                 </div>

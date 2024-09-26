@@ -1,74 +1,121 @@
 @extends('template.sidebar')
 
 @section('content')
-<div class="d-flex" style="justify-content: space-between">
-    <h1><b>Event Arisan Baru</b></h1>
-    <div class="cont2">
-        <a href="#" style="color: red; margin-right: 10px;">Batalkan</a>
-        <button class="btn" type="button" style="background-color: #03346E; color: #fff; width: 110px;">Simpan</button>
+<link rel="stylesheet" href="css/event.css">
+<div class="d-flex justify-content-between align-items-center">
+    <h2>Event Arisan Baru</h2>
+    <div>
+        <a href="#" class="btn" style="color: red">Batalkan</a>
+        <button class="btn" type="button" style="background-color: #03346E; color: #fff;">Simpan</button>
     </div>
 </div>
-<br>
-<div class="row">
-    <div class="col-sm-6 mb-3 mb-sm-0">
-      {{-- card-kiri --}}
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Deskripsi</h5>
-          <p class="card-text" style="color: #858585"><i class="ti ti-alert-circle" style="color: blue"></i> Mohon isi kelangkapan data Event Arisan.</p>
-          <hr>
-          <br>
-          <form class="row g-3">
-            <div class="col-md-6">
-              <label for="name" class="form-label">Judul <span style="color: red;">*</span></label>
-              <input type="text" class="form-control" name="name" required>
+<form action="#" method="POST" enctype="multipart/form-data">
+    @csrf
+    <div class="row mt-4">
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-header">
+                    Deskripsi
+                    <p class="card-text" style="color: #858585"><i class="ti ti-alert-circle" style="color: blue"></i> Mohon isi kelengkapan data Event Arisan.</p>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex flex-wrap">
+                        <div class="form-group me-3" style="flex: 1 1 45%;">
+                            <label for="judul" style="color: #4F4F4F;">Judul <span style="color: red">*</span></label>
+                            <input type="text" id="judul" name="judul" class="form-control mt-3" required>
+                        </div>
+                        <div class="form-group me-3" style="flex: 1 1 45%;">
+                            <label for="nominal" style="color: #4F4F4F;">Nominal <span style="color: red">*</span></label>
+                            <input type="text" id="nominal" name="nominal" class="form-control mt-3" required>
+                        </div>
+                        <div class="form-group me-3" style="flex: 1 1 45%;">
+                            <label for="jumlah_peserta" style="color: #4F4F4F;">Jumlah Peserta <span style="color: red">*</span></label>
+                            <input type="text" id="jumlah_peserta" name="jumlah_peserta" class="form-control mt-3" required>
+                        </div>
+                        <div class="form-group me-3" style="flex: 1 1 45%;">
+                            <label for="metode" style="color: #4F4F4F;">Metode Information <span style="color: red">*</span></label>
+                            <input type="text" id="metode" name="metode" class="form-control mt-3" required>
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="periode" style="color: #4F4F4F;">Periode Information <span style="color: red">*</span></label>
+                        <textarea id="periode" name="periode" class="form-control mt-3" required></textarea>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6">
-              <label for="rate" class="form-label">Nominal <span style="color: red;">*</span></label>
-              <input type="text" class="form-control" name="rate" required>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#termsCollapse" style="text-decoration: none; color: #4F4F4F;">
+                        Syarat & Ketentuan
+                    </button>
+                </div>
+                <div id="termsCollapse" class="collapse show">
+                    <div class="card-body">
+                        <textarea name="syarat_ketentuan" id="syarat_ketentuan" class="form-control" rows="6" required></textarea>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6">
-              <label for="hasil-nasabah" class="form-label">Jumlah Peserta <span style="color: red;">*</span></label>
-              <input type="text" class="form-control" name="hasil-nasabah" required>
-            </div>
-            <div class="col-md-6">
-              <label for="hasil-nisbah" class="form-label">Metode Information <span style="color: red;">*</span></label>
-              <input type="text" class="form-control" name="hasil-nisbah" required>
-            </div>
-            <div class="col-12">
-                <label for="inputAddress" class="form-label">Periode Information <span style="color: red">*</span></label>
-                <input type="text" class="form-control" id="inputAddress" style="height: 100px;">
-              </div>
-            <div class="input-group mb-3">
-              <select class="form-select" name="inputGroupSelect01">
-                <option selected>Choose...</option>
-                <option value="1">One</option>
-              </select>
-            </div>
-          </form>
         </div>
-      </div>
-    </div>
-{{-- card-kanan --}}
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Jadwal Tayang</h5>
-          <p class="card-text" style="color: #858585"><i class="ti ti-alert-circle" style="color: blue"></i> Mohon isi kelangkapan data Event Arisan.</p>
-          <hr>
-          <br>
-          <form class="row g-3">
-            <div class="col-md-6">
-              <label for="mulai-tayang" class="form-label">Tanggal Tayang <span style="color: red;">*</span></label>
-              <input type="date" class="form-control" name="mulai-tayang">
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header">
+                    Jadwal Tayang
+                    <p class="card-text" style="color: #858585"><i class="ti ti-alert-circle" style="color: blue"></i> Mohon isi kelengkapan data Event Arisan.</p>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="tanggal_tayang" style="color: #4F4F4F;">Tanggal Tayang <span style="color: red">*</span></label>
+                        <input type="date" id="tanggal_tayang" name="tanggal_tayang" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="berakhir_tayang" style="color: #4F4F4F;">Berakhir Tayang <span style="color: red"></span></label>
+                        <input type="number" id="berakhir_tayang" name="berakhir_tayang" class="form-control" placeholder="Hari" required>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6">
-              <label for="jam-tayang" class="form-label">Berakhir Tayang <span style="color: red;">*</span></label>
-              <input type="datetime" class="form-control" name="jam-tayang" placeholder="Hari">
+            <div class="card mb-4">
+                <div class="card-header">
+                    Gambar Sampul
+                </div>
+                <div class="card-body text-center">
+                    <input type="file" name="gambar_sampul" class="form-control-file">
+                    <p class="mt-2">Belum ada Gambar Sampul</p>
+                </div>
             </div>
-          </form>
+            <div class="card mb-4">
+                <div class="card-header">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#descriptionCollapse">
+                        Keterangan
+                    </button>
+                </div>
+                <div id="descriptionCollapse" class="collapse show">
+                    <div class="card-body">
+                        <textarea name="keterangan" id="keterangan" class="form-control" rows="4"></textarea>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</form>
+
+<!-- CKEditor -->
+<script>
+    CKEDITOR.replace('syarat_ketentuan', {
+        toolbar: [
+            { name: 'basicstyles', items: ['Bold', 'Italic', 'Underline'] },
+            { name: 'paragraph', items: ['NumberedList'] }
+        ]
+    });
+    CKEDITOR.replace('keterangan', {
+        toolbar: [
+            { name: 'basicstyles', items: ['Bold', 'Italic', 'Underline'] },
+            { name: 'paragraph', items: ['NumberedList'] }
+        ]
+    });
+</script>
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 @endsection

@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed; /* Tambahkan properti ini */
+}
+
+thead th {
+    background-color: #C8C4C4;
+    text-align: center;
+    padding: 15px;
+}
+.icon{
+    display: flex;
+}
+tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+tbody td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+/* Hanya untuk kolom pertama (List Arisan) */
+tbody td:first-child {
+    text-align: left;
+}
+
+tbody td img {
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.ongoing {
+    background-color: #2ecc71; /* Hijau */
+}
+
+.upcoming {
+    background-color: #3498db; /* Biru */
+}
+
+.unavailable {
+    background-color: #e74c3c; /* Merah */
+}
+
+td a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon.d-flex {
+    display: flex;
+    justify-content: center; /* Pusatkan ikon secara horizontal */
+    align-items: center;     /* Selaraskan ikon secara vertikal */
+}
+
+.icon a {
+    margin: 0 5px;          /* Jarak antar ikon */
+    text-decoration: none;    /* Menghapus garis bawah pada tautan */
+    color: inherit;          /* Warna ikon mengikuti warna teks */
+}
+
+.icon a i {
+    font-size: 20px;         /* Mengatur ukuran ikon */
+    transition: color 0.3s;  /* Transisi untuk hover */
+}
+
+.icon a:hover i {
+    color: #007bff;          /* Warna saat hover */
+}
+
+td a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .table-container {
+        width: 100%; /* Penuhi layar pada perangkat kecil */
+    }
+
+    table {
+        font-size: 14px; /* Ubah ukuran font sesuai kebutuhan */
+    }
+}
+
