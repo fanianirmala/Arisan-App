@@ -1,0 +1,42 @@
+.horizontal-line1 {
+    border-top: 1px solid #D9D9D9;
+    width: 100%;
+    position: absolute;
+    top: 17%;   
+    margin-left:-10px;
+}
+
+.horizontal-line2 {
+    border-top: 1px solid #D9D9D9;
+    width: 100%;
+    position: absolute;
+    top: 85%;
+}
+
+a.nav-link{
+    color: #4F4F4F;
+}
+
+.dropdown-btn {
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-top: 1px solid #e0e0e0;
+}
+
+.dropdown-content {
+    display: none;
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+.dropdown-btn:focus + .dropdown-content,
+.dropdown-btn:active + .dropdown-content {
+    display: block;
+}

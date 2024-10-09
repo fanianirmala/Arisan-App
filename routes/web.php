@@ -11,3 +11,9 @@ Route::get('/sidebar', function () {
 Route::get('/test', function () {
     return view('test');
 });
+Route::get('/arisan-detail', function () {
+    return view('\detail-arisan');
+})->name('detail');
+Route::get('/arisan-user', function () {
+    return view('\detail-user');
+});
