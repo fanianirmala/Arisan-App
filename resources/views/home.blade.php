@@ -31,7 +31,7 @@
                         <div class="icon d-flex">
                             <a href="#"><i class="ti ti-edit"></i></a>
                             <a href="#"><i class="ti ti-trash"></i></a>
-                            <a href="{{ route('detailevent') }}"><i class="ti ti-eye"></i></a>
+                            <a href="{{ route('detail-event') }}"><i class="ti ti-eye"></i></a>
                         </div>
                     </td>
                 </tr>
@@ -67,8 +67,17 @@
                 </tr>
             </tbody>
         </table>
+        <ul class="pagination justify-content-end mt-3">
+            <li class="page-item disabled">
+              <a class="page-link">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
     </div>
-
-
 </body>
 @endsection

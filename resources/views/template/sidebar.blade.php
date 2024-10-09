@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/sidebar.css">
     <title>Sidebar</title>
 </head>
@@ -34,7 +35,7 @@
                         </a>
                         <ul id="investasi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item" style="margin-left: 20px;">
-                                <a href="#" class="sidebar-link"><i class="ti ti-users-group" style="color: #858585"></i> Daftar User</a>
+                                <a href="{{ route('detail-user') }}" class="sidebar-link"><i class="ti ti-users-group" style="color: #858585"></i> Daftar User</a>
                             </li>
                         </ul>
                     </li>

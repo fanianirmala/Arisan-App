@@ -14,6 +14,10 @@ class RouteController extends Controller
     {
         return view('register');
     }
+    public function detailUser()
+    {
+        return view('detail-user');
+    }
     // public function sidebar()
     // {
     //     //
