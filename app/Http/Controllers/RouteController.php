@@ -14,6 +14,7 @@ class RouteController extends Controller
     {
         return view('register');
     }
+<<<<<<< HEAD
     public function detailUser()
     {
         return view('detail-user');
@@ -26,6 +27,12 @@ class RouteController extends Controller
     // {
     //     //
     // }
+=======
+   public function detailarisan()
+   {
+        return view('detail-arisan');
+   }
+>>>>>>> f707b62ee3f2c5fc437057f556997f4be9ca066b
 
     /**
      * Show the form for creating a new resource.
