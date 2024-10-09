@@ -3,7 +3,7 @@
     width: 100%;
     position: absolute;
     top: 17%;   
-    margin-left:-10px;
+    margin-left: -10px;
 }
 
 .horizontal-line2 {
@@ -13,7 +13,7 @@
     top: 85%;
 }
 
-a.nav-link{
+a.nav-link {
     color: #4F4F4F;
 }
 
@@ -39,4 +39,85 @@ a.nav-link{
 .dropdown-btn:focus + .dropdown-content,
 .dropdown-btn:active + .dropdown-content {
     display: block;
+}
+
+.join {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sedang-berlangsung {
+    background-color: #6FE389;
+    color: #fff;
+    margin-left: 30px;
+
+}
+
+.edit-button {
+    background-color: #03346E;
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    border-color: #03346E;
+    margin-left: 30px;
+}
+
+.berhenti-tayang {
+    display: flex;
+    align-items: center;
+    margin-top: 5px; /* Adjust spacing as needed */
+}
+
+.berhenti-tayang i {
+    margin-right: 5px;
+    color: red;
+}
+
+.berhenti-tayang p {
+    color: red;
+    margin: 0;
+}
+
+.jadwal-tayang, .berakhir-tayang {
+    border-radius: 10px;
+    margin-top: 5px;
+    background-color: #E2E2B6;
+    width: 210px;
+    padding: 5px;
+}
+
+.jadwal-tayang {
+    margin-left: 20px;
+}
+
+.berakhir-tayang {
+    margin-right: 20px;
+}
+
+.card-detail {
+    height: 115%;
+}
+
+.card-content {
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+.info-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.head {
+    color: #B4B4B4;
+}
+
+.info-body {
+    float: right;
+    text-align: right;
 }

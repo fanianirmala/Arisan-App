@@ -14,14 +14,10 @@ class RouteController extends Controller
     {
         return view('register');
     }
-    // public function sidebar()
-    // {
-    //     //
-    // }
-    // public function table()
-    // {
-    //     //
-    // }
+   public function detailarisan()
+   {
+        return view('detail-arisan');
+   }
 
     /**
      * Show the form for creating a new resource.
