@@ -27,7 +27,7 @@ body {
     flex: 1;
     border-bottom: 1px solid #000;
 }
-/* form-input */
+
 form .login-input{
     position: relative;
     border-bottom: 2px solid #adadad;
