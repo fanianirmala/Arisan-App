@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/sidebar.css">
     <title>Sidebar</title>
 </head>
@@ -20,58 +23,50 @@
                 {{-- sidebar navigation --}}
                 <ul class="sidebar-nav">
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
-                            {{-- {{ route('login') }} --}}
-                            <i class="fa-solid fa-wallet"></i>
-                            ZISWAF
+                        <a href="{{ route('home') }}" class="sidebar-link">
+                            <i class="ti ti-list-details" style="color: #858585"></i>
+                            Event Arisan
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#pages"
-                            aria-expanded="false" aria-controls="pages">
-                            <i class="fa-solid fa-chart-column"></i>
-                            Investasi Syariah
+                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#investasi"
+                            aria-expanded="false" aria-controls="investasi">
+                            <i class="ti ti-wallet" style="color: #858585;"></i>
+                            Verifikasi User
                         </a>
-                        <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <ul id="investasi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item" style="margin-left: 20px;">
-                                <a href="#" class="sidebar-link"><i class="fa-solid fa-arrow-right"></i></i> Deposito</a>
-                            </li>
-                            <li class="sidebar-item" style="margin-left: 20px;">
-                                <a href="#" class="sidebar-link"><i class="fa-solid fa-arrow-right"></i></i> Investasi</a>
+                                <a href="{{ route('detail-user') }}" class="sidebar-link"><i class="ti ti-users-group" style="color: #858585"></i> Daftar User</a>
                             </li>
                         </ul>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
-                            <i class="fa fa-tablet"></i>
-                            Banner
+                        <a href="{{ route('event-arisan-baru') }}" class="sidebar-link">
+                            <i class="ti ti-chart-histogram" style="color: #858585"></i>
+                            Event Arisan Baru
                         </a>
                     </li>
                     <li class="sidebar-item">
                         <a href="#" class="sidebar-link">
-                            <i class="fa-solid fa-user"></i>
-                            Pelanggan
+                            <i class="ti ti-users-group" style="color: #858585"></i>
+                            Komunitas
                         </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard"
-                            aria-expanded="false" aria-controls="dashboard">
-                            <i class="fa-solid fa-gear"></i>
-                            Pengaturan
-                        </a>
-                        <ul id="dashboard" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item" style="margin-left: 20px;">
-                                <a href="#" class="sidebar-link"><i class="fa-solid fa-arrow-right"></i> Pengaturan</a>
-                            </li>
-                        </ul>
                     </li>
                     <li class="sidebar-item">
                         <a href="#" class="sidebar-link">
-                            <i class="fa-solid fa-circle-info"></i>
-                            Bantuan
+                            <i class="ti ti-rosette-discount-check" style="color: #858585"></i>
+                            Verifikasi Penyelenggara
                         </a>
                     </li>
                 </ul>
+                <div class="sidebar-footer">
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link" style="color: red;">
+                            <i class="ti ti-logout-2" style="color: red"></i>
+                            Logout
+                        </a>
+                    </li>
+                </div>
             </div>
         </aside>
         <!-- Main Component -->
@@ -82,11 +77,21 @@
                 </button>
                 <div class="con" style="display: flex">
                     <div class="name" style="margin-top: 10px; margin-right: 20px;">
-                        <h6>Fania Nirmala</h6>
+                        <h6>
+                            @auth
+                                {{ Auth::user()->name }}
+                            @endauth
+                        </h6>
                     </div>
-                    <div class="img">
-                        <img src="Assets/img/profile-user.png" style="width: 30px">
-                        <button class="btn"><img src="Assets/img/down-arrow.png" style="width: 20px;"></button>
+                    <div class="img d-flex">
+                        <img src="Assets/img/profile-user.png" style="width: 40px;">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownProfile" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownProfile">
+                                <li><a class="dropdown-item" href="#">View Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </nav>
