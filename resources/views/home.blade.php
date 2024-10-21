@@ -2,7 +2,7 @@
 @section('content')
 <link rel="stylesheet" href="css/home.css">
 <body>
-    <i class="ti ti-home" style="color: #D2D2D2"></i><small><span style="color: #D2D2D2;">></span> Event Arisan</small>
+    <i class="ti ti-home" style="color: #D2D2D2; font-size: 1rem;"></i><small style="font-size: 0.875rem;"><span style="color: #D2D2D2;">></span> Event Arisan</small>
     <br>
     <br>
     <h2><b>Hai @auth {{ Auth::user()->name }}! @endauth</b></h2>
@@ -25,7 +25,7 @@
                         <img src="assets/img/prof.jpg">
                         <span>Nia’s Fun-Tastic</span>
                     </td>
-                    <td>Nia Aulia</td>
+                    <td>Nia</td>
                     <td><span class="status ongoing">Sedang Berlangsung</span></td>
                     <td>
                         <div class="icon d-flex">
@@ -40,7 +40,7 @@
                         <img src="assets/img/prof.jpg">
                         <span>Journey with Fania</span>
                     </td>
-                    <td>Fania Nirmala</td>
+                    <td>Fania</td>
                     <td><span class="status upcoming">Akan Berlangsung</span></td>
                     <td>
                         <div class="icon d-flex">
@@ -53,11 +53,11 @@
                 <tr>
                     <td>
                         <img src="assets/img/prof.jpg">
-                        <span>Wanda's Magic Moments</span>
+                        <span>Wanda's Moments</span>
                     </td>
-                    <td>Wanda Halimatusya'Diyah</td>
+                    <td>Wanda</td>
                     <td><span class="status unavailable">Tidak Tersedia</span></td>
-                    <td>
+                    <td> 
                         <div class="icon d-flex">
                             <a href="#"><i class="ti ti-edit"></i></a>
                             <a href="#"><i class="ti ti-trash"></i></a>

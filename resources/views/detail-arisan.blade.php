@@ -11,21 +11,17 @@
   <div class="content d-flex mt-4">
     <h1>Detail Arisan</h1>
     <a class="btn" type="button" style="background-color: #6FE389; color: #03C350; margin-left:30px; padding-top: 15px;">sedang berlangsung</a>
-  </div>
-  
-  <div class="cnt d-flex mt-4">
+</div>
+
+<div class="cnt d-flex mt-4">
     <button class="btn btn-primary" type="button" style="background-color: #03346E; color: #ffff; width:100px; height: 40px; border-color: #03346E; margin-left:30px;"><i class="fa-solid fa-pen"></i> Edit</button>
     <a href="#" class="btn"><i class="ti ti-dots-vertical" style="margin-top: 20px;"></i>
     </a>
-  </div>
+</div>
 </div>
 <div class="text d-flex" style="float: right; margin-right: 10px;">
   <i class="ti ti-circle-rectangle" style="margin-top: 10px; margin-right:5px; color: red;"></i><p class="mt-2" style="color: red">Berhenti Tayang</p>
 </div>
-
-  {{-- <div class="d-grid gap-2 d-md-flex justify-content-md-end"> --}}
-{{--   
-  </div> --}}
         <ul class="nav nav-underline mt-5">
             <li class="nav-item">
                 <a class="nav-link disable" href="#">Nominal Arisan</a>
@@ -34,27 +30,6 @@
                 <a class="nav-link" href="#">Jumlah Peserta</a>
             </li>
         </ul>
-
-        {{-- <div class="card text-center">
-            <div class="flex" style="display: flex; margin: 5px; padding: 5px;">
-                <div class="card-header" style= "border-radius:10px; background-color:#E2E2B6; width:220px; margin-left: 5px;"><i class="ti ti-calendar-check"></i> <b>Jadwal Tayang</b>
-                    <div class="text-card"><h7>02 Agustus 2021 23:00</h7></div>
-                </div>
-                <div class="card-header"  style= "border-radius:10px; background-color:#E2E2B6; width:220px; margin-left: 5px;"> <i class="ti ti-calendar-x" style="color:red;"></i> <b>Berakhir Tayang</b>
-                    <div class="text-card"><h6>02 Agustus 2021 23:00</h6></div>
-                </div>
-            </div>
-              
-
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              
-            </div>
-            <div class="card-footer text-body-secondary">
-              2 days ago
-            </div>
-        </div> --}}
         <div class="row">
             <div class="col-sm-6 mb-3 mb-sm-0">
               <div class="card" style="height:115%;">
@@ -93,17 +68,14 @@
               </div>
               <div class="horizontal-line2"></div>
               </div>
-              
+
             </div>
             <div class="col-sm-6">
               <div class="card">
-                {{-- <div class="card-body"> --}}
-                    {{-- <div class="card-section"> --}}
                       <button class="dropdown-btn" onclick="toggleDropdown('syarat')">Syarat & Ketentuan</button>
                       <div id="syarat" class="dropdown-content">
                           <p>lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem lorem lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem </p>
                       </div>
-                    {{-- <div class="card-section"> --}}
                         <button class="dropdown-btn" onclick="toggleDropdown('description')">Deskripsi</button>
                         <div id="description" class="dropdown-content">
                             <p>lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem lorem lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem lorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem Ipsumlorem </p>
@@ -114,4 +86,4 @@
               </div>
             </div>
           </div>
-    @endsection
+@endsection

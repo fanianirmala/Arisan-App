@@ -15,7 +15,5 @@
             <li><a class="dropdown-item" href="#">Lihat</a></li>
         </ul>
     </div>
-
-    <!-- Bootstrap Bundle with Popper -->
 </div>
 @endsection

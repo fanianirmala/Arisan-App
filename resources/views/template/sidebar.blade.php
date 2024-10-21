@@ -89,7 +89,6 @@
                             <button class="btn dropdown-toggle" type="button" id="dropdownProfile" data-bs-toggle="dropdown" aria-expanded="false"></button>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownProfile">
                                 <li><a class="dropdown-item" href="#">View Profile</a></li>
-                                <li><a class="dropdown-item" href="#">Edit Profile</a></li>
                             </ul>
                         </div>
                     </div>

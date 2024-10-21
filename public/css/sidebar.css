@@ -5,21 +5,29 @@
 ::before {
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
 }
+
 a {
     cursor: pointer;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
+
 li {
     list-style: none;
 }
+
 .wrapper {
     display: flex;
     width: 100%;
+}
+
+.sidebar-item i {
+    font-size: 20px;
 }
 #sidebar {
     position: fixed; /* Tetap di tempat saat scroll */
@@ -54,13 +62,7 @@ li {
     z-index: 1112; /* Lebih tinggi dari sidebar */
     border-bottom: 1px solid #ced4da; /* Border bawah untuk tampilan lebih rapi */
 }
-.sidebar-footer {
-    position: absolute; /* Tetap di bagian bawah */
-    bottom: 0; /* Posisikan di bagian bawah */
-    width: 100%; /* Lebar penuh sidebar */
-    padding: 1rem;
-    border-top: 1px solid #ced4da; /* Garis pembatas di bagian atas */
-}
+
 #sidebar.collapsed ~ .main .navbar {
     left: 0; /* Navbar berada di kiri saat sidebar ditutup */
     width: 100%; /* Navbar mengikuti lebar penuh ketika sidebar ditutup */
@@ -73,30 +75,20 @@ li {
 
 .sidebar-logo {
     padding: 1.15rem 1.5rem;
-}
-
-.sidebar-logo a {
-    color: #000000;
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1rem; /* Mengecilkan ukuran font untuk logo */
 }
 
 .sidebar-nav {
     padding: 0;
 }
 
-.sidebar-header {
-    color: #000000;
-    font-size: .75rem;
-    padding: 1.5rem 1.5rem .375rem;
-}
-
-a.sidebar-link {
+.sidebar-item a {
     padding: .625rem 1.625rem;
     color: #000000;
     position: relative;
     display: block;
-    font-size: 1rem;
+    font-size: 0.875rem; /* Mengecilkan ukuran font pada item sidebar */
+    transition: background-color 0.3s, color 0.3s; /* Efek transisi hover */
 }
 
 .sidebar-link[data-bs-toggle="collapse"]::after {
@@ -117,32 +109,28 @@ a.sidebar-link {
     transition: all .2s ease-out;
 }
 
+.sidebar-item a:hover,
+.sidebar-item a.active {
+    background-color: #007bff; /* Warna saat hover */
+    color: #fff; /* Warna teks saat hover */
+}
+
+.sidebar-footer {
+    position: absolute; /* Tetap di bagian bawah */
+    bottom: 0; /* Posisikan di bagian bawah */
+    width: 100%; /* Lebar penuh sidebar */
+    padding: 1rem;
+    font-size: 0.875rem; /* Mengecilkan ukuran font pada footer */
+    border-top: 1px solid #ced4da; /* Garis pembatas di bagian atas */
+}
+
 .content {
     flex: 1;
     max-width: 100vw;
     width: 100vw;
 }
 
-::placeholder {
-    float: inline-end;
-}
-
-.sidebar-item a {
-    position: relative;
-    transition: background-color 0.3s, color 0.3s;
-}
-.sidebar-item a:hover,
-.sidebar-item a.active {
-    background-color: #007bff;
-    color: #fff;
-}
-
-.sidebar-footer {
-    margin-top: auto; /* Footer di bawah */
-    padding: 1rem;
-}
-
-/* Responsive */
+/* Responsive settings */
 @media (min-width:768px) {
     .content {
         width: auto;
