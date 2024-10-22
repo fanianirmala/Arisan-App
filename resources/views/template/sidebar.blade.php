@@ -36,7 +36,7 @@
                         </a>
                         <ul id="investasi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item" style="margin-left: 20px;">
-                                <a href="{{ route('detail-user') }}" class="sidebar-link"><i class="ti ti-users-group" style="color: #858585"></i> Daftar User</a>
+                                <a href="{{ route('daftar-user1') }}" class="sidebar-link"><i class="ti ti-users-group" style="color: #858585"></i> Daftar User</a>
                             </li>
                         </ul>
                     </li>
