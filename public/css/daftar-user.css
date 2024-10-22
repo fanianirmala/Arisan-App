@@ -1,7 +1,13 @@
+* {
+    box-sizing: border-box; /* Memastikan padding dan border tidak melebihi lebar elemen */
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: white;
+    margin: 0; /* Hapus margin body untuk mencegah overflow */
+    padding: 0; /* Hapus padding body untuk mencegah overflow */
+    background-color: #f5f5f5;
+    overflow-x: hidden; /* Mencegah overflow horizontal */
 }
 
 .container {
@@ -11,6 +17,7 @@ body {
     align-items: center;
     height: 100vh;
     position: relative;
+    width: 100%; /* Pastikan kontainer tidak melebihi lebar layar */
 }
 
 .horizontal-line {
@@ -18,8 +25,9 @@ body {
     width: 96%;
     position: absolute;
     top: 21%;
-    margin-right: 2rem;
+    left: 2%; /* Ganti margin-right dengan left */
 }
+
 h1 {
     font-weight: bold;
     font-size: 37px;
@@ -45,49 +53,31 @@ h1 {
     color: #000;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-}
-
 .notification {
     background-color: #fcefe3;
     padding: 10px;
-    margin: 89px;
+    margin: 30px auto; /* Menggunakan auto untuk margin horizontal */
     border-radius: 15px;
     color: #d7830c;
-    margin-top: 7rem;
-    margin-left: 12px;
+    width: 95%; /* Mengatur lebar untuk mencegah overflow */
+    height: 90px;
 }
 
-.notification .content {
-    display: flex;
-    align-items: center; 
-    gap: 8px;
-    margin-left: 33px;
-}
+.notification .icon{
+    font-size: 30px;
+    margin-left: 20px;
 
-.notification a {
-    color: #3085d6;
-    text-decoration: none;
-    margin-left: 10px;
-    margin-top: -8px;
 }
 
 strong {
     margin-left: 70px;
 }
 
-
 table {
     width: 94%;
     border-collapse: collapse;
-    margin: 180px;
+    margin: 3rem auto; /* Mengatur margin horizontal secara otomatis */
     background-color: #fff;
-    margin-top: 3rem;
-    margin-left: 32px;
 }
 
 th, td {
@@ -142,17 +132,14 @@ p {
     margin-top: -4rem;
 }
 
-svg.icon.icon-tabler.icons-tabler-outline.icon-tabler-dots-vertical {
-    margin-left: 72rem;
-    margin-top: -78rem;
-}
-
 .status.declined {
     background-color: #FF6347;
 }
+
 .action-cell {
     position: relative;
 }
+
 .action-menu {
     display: none;
     position: absolute;
@@ -163,6 +150,7 @@ svg.icon.icon-tabler.icons-tabler-outline.icon-tabler-dots-vertical {
     padding: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .action-menu::before {
     content: '';
     position: absolute;
@@ -173,6 +161,7 @@ svg.icon.icon-tabler.icons-tabler-outline.icon-tabler-dots-vertical {
     border-style: solid;
     border-color: transparent #f2f2f2 transparent transparent;
 }
+
 .detail-btn {
     display: flex;
     align-items: center;
@@ -181,12 +170,12 @@ svg.icon.icon-tabler.icons-tabler-outline.icon-tabler-dots-vertical {
     border-radius: 15px;
     cursor: pointer;
 }
+
 .detail-btn:hover {
     background-color: #c0c0c0;
 }
+
 .detail-btn i {
     margin-right: 5px;
     color: #007bff;
 }
-
-  

@@ -36,7 +36,7 @@
                         </a>
                         <ul id="investasi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item" style="margin-left: 20px;">
-                                <a href="{{ route('detail-user') }}" class="sidebar-link"><i class="ti ti-users-group" style="color: #858585"></i> Daftar User</a>
+                                <a href="{{ route('daftar-user') }}" class="sidebar-link"><i class="ti ti-users-group" style="color: #858585"></i> Daftar User</a>
                             </li>
                         </ul>
                     </li>
@@ -53,7 +53,7 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <a href="{{ route('data-personal') }}" class="sidebar-link">
                             <i class="ti ti-rosette-discount-check" style="color: #858585"></i>
                             Verifikasi Penyelenggara
                         </a>

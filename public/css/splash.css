@@ -29,13 +29,8 @@ body {
     flex: 1;
     border-bottom: 1px solid grey;
 }
-
-<<<<<<< HEAD
-form .login-input{
-=======
 /* form-input */
 form .login-input {
->>>>>>> 317333d29bce097a51a37ab64c9aa3e3d7aa3090
     position: relative;
     border-bottom: 2px solid #adadad;
     margin: 20px 0;

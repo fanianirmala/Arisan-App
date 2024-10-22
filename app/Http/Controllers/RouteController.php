@@ -15,6 +15,21 @@ class RouteController extends Controller
         return view('register');
     }
 
+    public function daftarUser()
+    {
+        return view('daftarUser');
+    }
+
+    public function dataTransaksi()
+    {
+        return view('detailUser-dataTransaksi');
+    }
+
+    public function dataPersonal()
+    {
+        return view('detailUser-dataPersonal');
+    }
+
     public function detailUser()
     {
         return view('detail-user');
