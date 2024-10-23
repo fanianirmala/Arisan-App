@@ -53,7 +53,7 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="{{ route('data-personal') }}" class="sidebar-link">
+                        <a href="#" class="sidebar-link">
                             <i class="ti ti-rosette-discount-check" style="color: #858585"></i>
                             Verifikasi Penyelenggara
                         </a>
@@ -88,7 +88,7 @@
                         <div class="dropdown">
                             <button class="btn dropdown-toggle" type="button" id="dropdownProfile" data-bs-toggle="dropdown" aria-expanded="false"></button>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownProfile">
-                                <li><a class="dropdown-item" href="#">View Profile</a></li>
+                                <li><a class="dropdown-item" href="{{ route('view-profile') }}">View Profile</a></li>
                             </ul>
                         </div>
                     </div>

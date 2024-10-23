@@ -35,28 +35,25 @@
     <div class="row">
         <div class="col-sm-6 mb-3 mb-sm-0">
             <div class="card card-detail">
-                <div class="flex card-content">
-                    <div class="card-header jadwal-tayang d-flex align-items-center">
-                        <div class="icon-container">
-                            <i class="ti ti-calendar-check"></i>
+                <div class="card-jadwal d-flex">
+                    <div class="mulai-tayang d-flex">
+                        <div class="icon">
+                            <i class="ti ti-calendar-check" style="color: #03346E"></i>
                         </div>
-                        <div class="card-info">
-                            <b>Jadwal Tayang</b>
-                            <div class="text-card"><h7>02 Agustus 2021 23:00</h7></div>
-                        </div>
-                    </div>
-                    <div class="card-header berakhir-tayang d-flex align-items-center">
-                        <div class="icon-container">
-                            <i class="ti ti-calendar-x"></i>
-                        </div>
-                        <div class="card-info">
-                            <b>Berakhir Tayang</b>
-                            <div class="text-card"><h6>10 Agustus 2021 23:00</h6></div>
+                        <div class="text">
+                            <p><b>Mulai Tayang</b><br><small>02 Agustus 2021 16:58 WIB</small></p>
                         </div>
                     </div>
-                    <div class="horizontal-line1"></div>
+                    <div class="berakhir-tayang d-flex">
+                        <div class="icon">
+                            <i class="ti ti-calendar-x" style="color: #FF5050"></i>
+                        </div>
+                        <div class="text">
+                            <p><b>Berakhir Tayang</b><br><small>01 Agustus 2024 16:55 WIB</small></p>
+                        </div>
+                    </div>
                 </div>
-                
+                <hr>
 
                 <div class="fx info-section">
                     <div class="head">
@@ -82,21 +79,42 @@
                         <p>Rp0</p>
                     </div>
                 </div>
-                <div class="horizontal-line2"></div>
-            </div>        
+                <hr>
+                <div class="dana d-flex">
+                    <i class="ti ti-wallet" style="color: #03346E;"></i>
+                    <p>Terkumpul<br><b>Rp. 5.000.000</b></p>
+                </div>
+            </div>
         </div>
         <div class="col-sm-6">
             <div class="card">
                 <button class="dropdown-btn" onclick="toggleDropdown('syarat')">Syarat & Ketentuan</button>
                 <div id="syarat" class="dropdown-content">
-                    <p>Lorem Ipsum content here...</p>
+                    <p>Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem</p>
                 </div>
                 <button class="dropdown-btn" onclick="toggleDropdown('description')">Deskripsi</button>
                 <div id="description" class="dropdown-content">
-                    <p>Lorem Ipsum content here...</p>
+                    <p>Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem Ipsum lorem</p>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        function toggleDropdown(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+
+        // Fungsi untuk menampilkan konten secara otomatis saat halaman dimuat
+        window.onload = function() {
+            // Buka konten 'Syarat & Ketentuan' dan 'Deskripsi' saat pertama kali halaman dimuat
+            document.getElementById('syarat').style.display = 'block';
+            document.getElementById('description').style.display = 'block';
+        };
+    </script>
 </body>
 @endsection

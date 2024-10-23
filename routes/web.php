@@ -16,3 +16,4 @@ Route::get('/detailarisan', [RouteController::class, 'detailarisan'])->name('det
 Route::get('/daftar-user', [RouteController::class, 'daftarUser'])->name('daftar-user');
 Route::get('/data-personal', [RouteController::class, 'dataPersonal'])->name('data-personal');
 Route::get('/data-transaksi', [RouteController::class, 'dataTransaksi'])->name('data-transaksi');
+Route::get('/view-profile', [RouteController::class, 'viewProfile'])->name('view-profile');

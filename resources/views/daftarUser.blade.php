@@ -15,9 +15,8 @@
     <div class="icon">
         <i class="ti ti-alert-triangle-filled"></i>
     </div>
-    <div class="text-notification">
-        <p>Informasi User</p>
-        <p>Mohon untuk periksa customer baru agar dapat diproses <span style="color: #4393AC;">Periksa Sekarang</span> </p>
+    <div class="text-notification" style="color: #000">
+        <p>Informasi User <br>Mohon untuk periksa customer baru agar dapat diproses <a href="#" style="color: #4393AC;">Periksa Sekarang</a></p>
     </div>
 </div>
 <div class="pag d-flex">
@@ -33,7 +32,6 @@
         </button>
     </div>
 </div>
-
 <table>
     <thead class="table-secondary">
         <tr>
@@ -58,7 +56,7 @@
                 <i class="fas fa-ellipsis-v" style="cursor: pointer;" onclick="toggleActionMenu(this)"></i>
                 <div class="action-menu">
                     <div class="detail-btn">
-                        <a href="{{ route('data-transaksi') }}">Detail</a>
+                        <a href="{{ route('data-personal') }}">Detail</a>
                     </div>
                 </div>
             </td>

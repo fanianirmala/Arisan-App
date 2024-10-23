@@ -6,7 +6,6 @@ body {
     font-family: Arial, sans-serif;
     margin: 0; /* Hapus margin body untuk mencegah overflow */
     padding: 0; /* Hapus padding body untuk mencegah overflow */
-    background-color: #f5f5f5;
     overflow-x: hidden; /* Mencegah overflow horizontal */
 }
 
@@ -60,7 +59,7 @@ h1 {
     border-radius: 15px;
     color: #d7830c;
     width: 95%; /* Mengatur lebar untuk mencegah overflow */
-    height: 90px;
+    height: 80px;
 }
 
 .notification .icon{

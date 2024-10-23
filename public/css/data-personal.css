@@ -1,8 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
-    background-color: #f5f5f5;
+    padding: 0;
 }
 
 .user-info {
@@ -55,7 +54,7 @@ h3 {
 }
 
 .tab-link.active {
-    background-color: #007bff;
+    background-color: #03346E;
     color: white;
 }
 
@@ -89,7 +88,7 @@ h3 {
 }
 
 .photo-item {
-    text-align: center;
+    text-align: left;
 }
 
 .photo-placeholder {
@@ -106,3 +105,81 @@ h3 {
     font-size: 50px;
     color: #aaa;
 }
+
+
+
+
+
+/* Mengatur gambar profil */
+.profile-pic img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    margin-right: 15px;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+}
+
+.info {
+    color: #F05757;
+    background-color: #F1BBC6;
+    height: 25px;
+    width: 130px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px;
+    margin-bottom: 5px;
+}
+.info p{
+    font-size: 0.85rem;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+td{
+    padding: 10px;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #444444;
+    margin: 0;
+}
+
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+.details > div {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    font-size: 14px;
+    color: #6b6b6b;
+}
+
+.details i {
+    margin-right: 5px;
+}
+
+.details p {
+    margin: 0;
+}
+
+.no, .user, .email, .ttl, .gender {
+    display: flex;
+    align-items: center;
+}
+
+
+

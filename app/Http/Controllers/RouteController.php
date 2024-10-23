@@ -15,6 +15,11 @@ class RouteController extends Controller
         return view('register');
     }
 
+    public function viewProfile()
+    {
+        return view('viewProfile');
+    }
+
     public function daftarUser()
     {
         return view('daftarUser');

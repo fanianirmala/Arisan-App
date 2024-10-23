@@ -1,10 +1,4 @@
-.horizontal-line1 {
-    border-top: 1px solid #D9D9D9;
-    width: 100%;
-    position: absolute;
-    top: 17%;   
-    margin-left: -10px;
-}
+
 
 .horizontal-line2 {
     border-top: 1px solid #D9D9D9;
@@ -31,7 +25,7 @@ a.nav-link {
 }
 
 .dropdown-content {
-    display: none;
+    display: none; /* Sembunyikan secara default */
     padding: 15px;
     background-color: #ffffff;
 }
@@ -79,24 +73,44 @@ a.nav-link {
     margin: 0;
 }
 
-.jadwal-tayang, .berakhir-tayang {
-    border-radius: 10px;
+/* .jadwal-tayang, .berakhir-tayang {
+    border-radius: 10%;
     margin-top: 5px;
     background-color: #E2E2B6;
     width: 210px;
     padding: 5px;
 }
 
-.jadwal-tayang {
-    margin-left: 20px;
+.icon-container .ti{
+    color: pink;
+    font-size: 25px;
+} */
+
+.card-jadwal .icon{
+    font-size: 30px;
+    margin: 5px;
 }
 
-.berakhir-tayang {
-    margin-right: 20px;
+.card-jadwal{
+    justify-content: space-between;
+    padding: 10px;
 }
 
+.mulai-tayang{
+    background-color: #E2E2B6;
+    padding: 5px;
+    border-radius: 5px;
+    height: 60px;
+}
+
+.berakhir-tayang{
+    background-color: #E2E2B6;
+    padding: 5px;
+    border-radius: 5px;
+    height: 60px;
+}
 .card-detail {
-    height: 115%;
+    height: 100%;
 }
 
 .card-content {
@@ -104,6 +118,19 @@ a.nav-link {
     margin: 5px;
     padding: 5px;
     justify-content: space-between;
+}
+
+.dana .ti{
+    background-color: #D9D9D9;
+    height: 40px;
+    width: auto;
+    font-size: 40px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.dana{
+    padding: 10px;
 }
 
 .info-section {
