@@ -1,10 +1,6 @@
 <?php
 namespace App\Http\Controllers;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
-=======
-use Illuminate\Support\Facades\Auth; 
->>>>>>> 490d59a83177b0d334fea6b0860cf10377ad75a8
 use App\Models\Login;
 use Illuminate\Http\Request;
 

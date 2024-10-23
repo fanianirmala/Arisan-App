@@ -15,12 +15,10 @@ class RouteController extends Controller
         return view('register');
     }
 
-<<<<<<< HEAD
     public function viewProfile()
     {
         return view('viewProfile');
     }
-=======
    public function detailarisan()
    {
         return view('detail-arisan');
@@ -29,7 +27,6 @@ class RouteController extends Controller
     /**
      * Show the form for creating a new resource.
      */
->>>>>>> 490d59a83177b0d334fea6b0860cf10377ad75a8
 
     public function daftarUser()
     {
