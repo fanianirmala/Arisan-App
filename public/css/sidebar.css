@@ -130,6 +130,10 @@ li {
     width: 100vw;
 }
 
+div#datatable_wrapper {
+    margin-top: -31px;
+}
+
 /* Responsive settings */
 @media (min-width:768px) {
     .content {

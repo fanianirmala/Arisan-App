@@ -15,10 +15,21 @@ class RouteController extends Controller
         return view('register');
     }
 
+<<<<<<< HEAD
     public function viewProfile()
     {
         return view('viewProfile');
     }
+=======
+   public function detailarisan()
+   {
+        return view('detail-arisan');
+   }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+>>>>>>> 490d59a83177b0d334fea6b0860cf10377ad75a8
 
     public function daftarUser()
     {
@@ -27,7 +38,7 @@ class RouteController extends Controller
 
     public function dataTransaksi()
     {
-        return view('detailUser-dataTransaksi');
+        return view('detail-user-transaksi');
     }
 
     public function dataPersonal()
@@ -39,10 +50,7 @@ class RouteController extends Controller
     {
         return view('detail-user');
     }
-    public function detailarisan()
-    {
-            return view('detail-arisan');
-    }
+
     public function create()
     {
         //
