@@ -20,14 +20,30 @@ class RouteController extends Controller
         return view('detail-arisan');
    }
 
-   public function daftarUser()
-   {
-        return view('daftar-user');
-   }
-
     /**
      * Show the form for creating a new resource.
      */
+
+    public function daftarUser()
+    {
+        return view('daftarUser');
+    }
+
+    public function dataTransaksi()
+    {
+        return view('detail-user-transaksi');
+    }
+
+    public function dataPersonal()
+    {
+        return view('detailUser-dataPersonal');
+    }
+
+    public function detailUser()
+    {
+        return view('detail-user');
+    }
+
     public function create()
     {
         //

@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: white;
+}
+
+    .table-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .table-header h5 {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .table-header p {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    .dataTables_wrapper .dataTables_filter {
+        float: right;
+        text-align: right;
+    }
+
+    .dataTables_wrapper .dataTables_length {
+        float: left;
+    }
+
+    .dataTables_wrapper .dataTables_paginate {
+        float: right;
+    }
+
+    /* Styling for the proof link */
+    a {
+        text-decoration: none;
+        color: #00BFFF;
+    }
+
+    table thead {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    

@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box; /* Memastikan padding dan border tidak melebihi lebar elemen */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Hapus margin body untuk mencegah overflow */
+    padding: 0; /* Hapus padding body untuk mencegah overflow */
+    background-color: #f5f5f5;
+    overflow-x: hidden; /* Mencegah overflow horizontal */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    width: 100%; /* Pastikan kontainer tidak melebihi lebar layar */
+}
+
+.horizontal-line {
+    border-top: 5px solid #D9D9D9;
+    width: 96%;
+    position: absolute;
+    top: 21%;
+    left: 2%; /* Ganti margin-right dengan left */
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 37px;
+    margin-right: 61rem;
+    margin-top: -17rem;
+}
+
+.breadcrumb-nav {
+    display: flex;
+    align-items: center;
+    margin-top: -44rem;
+    margin-left: 3rem;
+}
+
+.breadcrumb-nav svg {
+    margin-right: 8px;
+    color: #D2D2D2;
+}
+
+.breadcrumb-nav a {
+    text-decoration: none;
+    margin-right: 8px;
+    color: #000;
+}
+
+.notification {
+    background-color: #fcefe3;
+    padding: 10px;
+    margin: 30px auto; /* Menggunakan auto untuk margin horizontal */
+    border-radius: 15px;
+    color: #d7830c;
+    width: 95%; /* Mengatur lebar untuk mencegah overflow */
+    height: 90px;
+}
+
+.notification .icon{
+    font-size: 30px;
+    margin-left: 20px;
+
+}
+
+strong {
+    margin-left: 70px;
+}
+
+table {
+    width: 94%;
+    border-collapse: collapse;
+    margin: 3rem auto; /* Mengatur margin horizontal secara otomatis */
+    background-color: #fff;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.status.registered {
+    background-color: #4caf50;
+    color: white;
+}
+
+.status.declined {
+    background-color: #f44336;
+    color: white;
+}
+
+.status.action-needed {
+    background-color: #ff9800;
+    color: white;
+}
+
+.aksi-button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+p {
+    margin-top: 5px;
+    margin-bottom: 1rem;
+    margin-left: 38px;
+}
+
+.text3 {
+    margin-top: -4rem;
+}
+
+.status.declined {
+    background-color: #FF6347;
+}
+
+.action-cell {
+    position: relative;
+}
+
+.action-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.action-menu::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 100%;
+    margin-right: 10px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent #f2f2f2 transparent transparent;
+}
+
+.detail-btn {
+    display: flex;
+    align-items: center;
+    background-color: #d3d3d3;
+    padding: 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.detail-btn:hover {
+    background-color: #c0c0c0;
+}
+
+.detail-btn i {
+    margin-right: 5px;
+    color: #007bff;
+}

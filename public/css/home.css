@@ -33,6 +33,7 @@ tbody tr:nth-of-type(even) {
 tbody td {
     padding: 12px 15px;
     text-align: center;
+    font-size: 0.875rem;  /* Ukuran font lebih kecil */
 }
 
 /* Hanya untuk kolom pertama (List Arisan) */
@@ -82,7 +83,7 @@ td a {
 }
 
 .icon a {
-    margin: 0 5px;          /* Jarak antar ikon */
+    margin: 0 1px;          /* Jarak antar ikon */
     text-decoration: none;    /* Menghapus garis bawah pada tautan */
     color: inherit;          /* Warna ikon mengikuti warna teks */
 }
