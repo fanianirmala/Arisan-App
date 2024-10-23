@@ -1,12 +1,12 @@
 * {
-    box-sizing: border-box; /* Memastikan padding dan border tidak melebihi lebar elemen */
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0; /* Hapus margin body untuk mencegah overflow */
-    padding: 0; /* Hapus padding body untuk mencegah overflow */
-    overflow-x: hidden; /* Mencegah overflow horizontal */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 .container {
@@ -16,7 +16,7 @@ body {
     align-items: center;
     height: 100vh;
     position: relative;
-    width: 100%; /* Pastikan kontainer tidak melebihi lebar layar */
+    width: 100%;
 }
 
 .horizontal-line {
@@ -24,7 +24,7 @@ body {
     width: 96%;
     position: absolute;
     top: 21%;
-    left: 2%; /* Ganti margin-right dengan left */
+    left: 2%;
 }
 
 h1 {
@@ -55,10 +55,10 @@ h1 {
 .notification {
     background-color: #fcefe3;
     padding: 10px;
-    margin: 30px auto; /* Menggunakan auto untuk margin horizontal */
+    margin: 30px auto;
     border-radius: 15px;
     color: #d7830c;
-    width: 95%; /* Mengatur lebar untuk mencegah overflow */
+    width: 95%;
     height: 80px;
 }
 
@@ -75,7 +75,7 @@ strong {
 table {
     width: 94%;
     border-collapse: collapse;
-    margin: 3rem auto; /* Mengatur margin horizontal secara otomatis */
+    margin: 3rem auto;
     background-color: #fff;
 }
 

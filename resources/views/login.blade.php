@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="css/splash.css">
     <title>Arisan App</title>
 </head>
+
 <body>
     <div class="splash">
         <img src="Assets/img/logo-Arumi.png" alt="Arumi Logo" class="fade-in">
@@ -64,15 +66,15 @@
     <script>
         const splash = document.querySelector('.splash');
 
-        document.addEventListener('DOMContentLoaded',(e)=>{
-            setTimeout(()=>{
+        document.addEventListener('DOMContentLoaded', (e) => {
+            setTimeout(() => {
                 splash.classList.add('display-none');
             }, 3000);
         })
 
         const header = document.querySelector('.header');
 
-        window.onscroll = function(){
+        window.onscroll = function() {
             var top = window.scrollY;
             if (top >= 50) {
                 header.classList.add('active');
@@ -82,4 +84,5 @@
         }
     </script>
 </body>
+
 </html>

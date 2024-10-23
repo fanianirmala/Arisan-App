@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.css">
     <link rel="stylesheet" href="css/sidebar.css">
-    <title>Sidebar</title>
+    <title>ARUMI</title>
 </head>
 <body>
     <div class="wrapper">
@@ -25,7 +25,7 @@
                 {{-- sidebar navigation --}}
                 <ul class="sidebar-nav">
                     <li class="sidebar-item">
-                        <a href="{{ route('home') }}" class="sidebar-link">
+                        <a href="{{ route('list-arisan') }}" class="sidebar-link">
                             <i class="ti ti-list-details" style="color: #858585"></i>
                             Event Arisan
                         </a>

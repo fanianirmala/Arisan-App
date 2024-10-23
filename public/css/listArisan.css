@@ -11,7 +11,7 @@
 
 table {
     width: 100%;
-    table-layout: fixed; /* Tambahkan properti ini */
+    table-layout: fixed;
 }
 
 thead th {
@@ -19,9 +19,11 @@ thead th {
     text-align: center;
     padding: 15px;
 }
+
 .icon{
     display: flex;
 }
+
 tbody tr {
     border-bottom: 1px solid #ddd;
 }
@@ -33,10 +35,9 @@ tbody tr:nth-of-type(even) {
 tbody td {
     padding: 12px 15px;
     text-align: center;
-    font-size: 0.875rem;  /* Ukuran font lebih kecil */
+    font-size: 0.875rem;
 }
 
-/* Hanya untuk kolom pertama (List Arisan) */
 tbody td:first-child {
     text-align: left;
 }
@@ -56,15 +57,15 @@ tbody td img {
 }
 
 .ongoing {
-    background-color: #2ecc71; /* Hijau */
+    background-color: #2ecc71;
 }
 
 .upcoming {
-    background-color: #3498db; /* Biru */
+    background-color: #3498db;
 }
 
 .unavailable {
-    background-color: #e74c3c; /* Merah */
+    background-color: #e74c3c;
 }
 
 td a {
@@ -78,23 +79,23 @@ td a {
 
 .icon.d-flex {
     display: flex;
-    justify-content: center; /* Pusatkan ikon secara horizontal */
-    align-items: center;     /* Selaraskan ikon secara vertikal */
+    justify-content: center;
+    align-items: center;
 }
 
 .icon a {
-    margin: 0 1px;          /* Jarak antar ikon */
-    text-decoration: none;    /* Menghapus garis bawah pada tautan */
-    color: inherit;          /* Warna ikon mengikuti warna teks */
+    margin: 0 1px;
+    text-decoration: none;
+    color: inherit;
 }
 
 .icon a i {
-    font-size: 20px;         /* Mengatur ukuran ikon */
-    transition: color 0.3s;  /* Transisi untuk hover */
+    font-size: 20px;
+    transition: color 0.3s;
 }
 
 .icon a:hover i {
-    color: #007bff;          /* Warna saat hover */
+    color: #007bff;
 }
 
 td a img {
@@ -105,11 +106,11 @@ td a img {
 
 @media (max-width: 768px) {
     .table-container {
-        width: 100%; /* Penuhi layar pada perangkat kecil */
+        width: 100%; 
     }
 
     table {
-        font-size: 14px; /* Ubah ukuran font sesuai kebutuhan */
+        font-size: 14px;
     }
 }
 
