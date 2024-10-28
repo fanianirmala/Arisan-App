@@ -13,7 +13,7 @@
                 <a href="#"><i class="ti ti-dots-vertical" style="font-size: 25px; color: #000;"></i></a>
             </div>
         </div>
-        <div class="head mt-4">
+        <div class="head mt-4"> 
             <div class="heading d-flex">
                 <div class="profile-pic">
                     <img src="assets/img/prof.jpg" alt="Profile Picture">
@@ -206,7 +206,7 @@
                 document.getElementById(tabName).style.display = "block";
                 evt.currentTarget.className += " active";
             }
-            
+
             window.onload = function() {
                 openTab(event, 'data-personal');
             };
