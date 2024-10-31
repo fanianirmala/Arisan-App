@@ -92,7 +92,15 @@
                 <button class="tab-link active" onclick="openTab(event, 'data-personal')">Data Personal</button>
                 <button class="tab-link" onclick="openTab(event, 'data-transaksi')">Data Transaksi</button>
             </div>
-
+            <div class="input-group mt-1 me-5" style="margin-top:-5rem; display: flex; justify-content: flex-end;">
+                <div class="form-outline me-2" data-mdb-input-init>
+                    <input type="search" id="form1" class="form-control" placeholder="Cari" />
+                </div>
+                <button type="button" class="btn"
+                    style="background-color: transparent; border: 1px solid #ced4da; height: 37px;" data-mdb-ripple-init>
+                    <i class="fa-solid fa-filter fa-sm" style="color: #929695;"></i>
+                </button>
+            </div>
             <div id="data-personal" class="tab-content">
                 <div class="data-container">
                     <div class="personal-info mt-1">

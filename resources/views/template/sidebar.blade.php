@@ -63,7 +63,7 @@
                 </ul>
                 <div class="sidebar-footer">
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link" style="color: red;">
+                        <a href="/login" class="sidebar-link" style="color: red;">
                             <i class="ti ti-logout-2" style="color: red"></i>
                             Logout
                         </a>

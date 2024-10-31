@@ -24,6 +24,12 @@ class LoginController extends Controller
             'password' => 'required',
         ]);
 
+        // Validasi input
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
         // Kredensial login yang akan dikirim ke API
         $credentials = [
             'email' => $request->email,
@@ -56,35 +62,5 @@ class LoginController extends Controller
             // Tangani error jika ada masalah pada API atau jaringan
             return redirect('/')->withErrors(['email' => 'Terjadi kesalahan. Coba lagi nanti.']);
         }
-    }
-
-    public function create()
-    {
-        //
-    }
-
-    public function store(Request $request)
-    {
-        //
-    }
-
-    public function show(Login $login)
-    {
-        //
-    }
-
-    public function edit(Login $login)
-    {
-        //
-    }
-
-    public function update(Request $request, Login $login)
-    {
-        //
-    }
-
-    public function destroy(Login $login)
-    {
-        //
     }
 }

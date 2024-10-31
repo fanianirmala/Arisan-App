@@ -23,45 +23,46 @@
     <section>
         <div class="container d-flex justify-content-center align-items-center min-vh-100">
             <div class="row rounded-5 shadow p-3 mb-5 bg-body-tertiary">
-                <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background-image: url('Assets/img/login.png'); background-size: cover;"></div>
+                <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
+                    style="background-image: url('Assets/img/login.png'); background-size: cover;"></div>
                 <div class="col-md-6 right-box">
                     <div class="row align-items-center text-center">
                         <div class="header-text mb-4">
                             <h2><b>Sign In</b></h2>
-                            <p>Don't have an account? <a href="{{ route('register') }}" style="text-decoration: none;">Sign Up</a></p>
+                            <p>Don't have an account? <a href="{{ route('register') }}"
+                                    style="text-decoration: none;">Sign Up</a></p>
                         </div>
-                        <form action="{{ route('postlogin') }}" method="POST">
+                        <form action="/postlogin" method="POST">
                             @csrf
                             <div class="login-input">
-                                <input type="email" name="email" required>
+                                <input type="email" id="email" name="email" required> <!-- Tambah id email -->
                                 <span></span>
                                 <label>Email</label>
                             </div>
                             <div class="login-input">
-                                <input type="password" name="password" required>
+                                <input type="password" id="password" name="password" required>
+                                <!-- Tambah id password -->
                                 <span></span>
                                 <label>Password</label>
                             </div>
                             <div class="input-group mb-3">
-                                <button class="btn btn-lg w-100 fs-6" style="background-color: #03346E; color: #fff;">Sign In</button>
+                                <button class="btn btn-lg w-100 fs-6" style="background-color: #03346E; color: #fff;" type="submit">Sign In</button>
                             </div>
                         </form>
                         <div class="divider">or</div>
                         <div class="button">
-                            <button class="btn shadow rounded-2"><img src="Assets/img/icon-google.png" style="width:40px;"></button>
-                            <button class="btn shadow rounded-2"><img src="Assets/img/icon-facebook.png" style="width:40px;"></button>
-                            <button class="btn shadow rounded-2"><img src="Assets/img/icon-twitter.png" style="width:40px;"></button>
+                            <button class="btn shadow rounded-2"><img src="Assets/img/icon-google.png"
+                                    style="width:40px;"></button>
+                            <button class="btn shadow rounded-2"><img src="Assets/img/icon-facebook.png"
+                                    style="width:40px;"></button>
+                            <button class="btn shadow rounded-2"><img src="Assets/img/icon-twitter.png"
+                                    style="width:40px;"></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section></section>
-    <section></section>
-    <section></section>
-    <section></section>
 
     <script>
         const splash = document.querySelector('.splash');
@@ -84,5 +85,4 @@
         }
     </script>
 </body>
-
 </html>

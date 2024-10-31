@@ -22,26 +22,27 @@
                 </thead>
                 <tbody>
                     @foreach ($events as $event)
-                    <tr>
-                        <td>
-                            <img src="assets/img/prof.jpg">
-                            <span>{{ $event['title'] }}</span>
-                        </td>
-                        <td>{{ $event['created_by'] ?? 'Tidak diketahui' }}</td>
-                        <td>
-                            <span class="status {{ strtolower($event['status_arisan']) }}">
-                                {{ $event['status_arisan'] }}
-                            </span>
-                        </td>
-                        <td>
-                            <div class="icon d-flex">
-                                <a href="#"><i class="ti ti-edit"></i></a>
-                                <a href="#"><i class="ti ti-trash"></i></a>
-                                <a href="{{ route('detail-event', ['id' => $event['id']]) }}"><i class="ti ti-eye"></i></a>
-                            </div>
-                        </td>
-                    </tr>
-                @endforeach
+                        <tr>
+                            <td>
+                                <img src="assets/img/prof.jpg">
+                                <span>{{ $event['title'] }}</span>
+                            </td>
+                            <td>{{ $event['created_by'] ?? 'Tidak diketahui' }}</td>
+                            <td>
+                                <span class="status {{ strtolower($event['status_arisan']) }}">
+                                <span class="status" style="background-color:orange ; color: white;">
+                                    {{ $event['status_arisan'] }}
+                                </span>
+                            </td>
+                            <td>
+                                <div class="icon d-flex">
+                                    <a href="#"><i class="ti ti-edit"></i></a>
+                                    <a href="#"><i class="ti ti-trash"></i></a>
+                                    <a href="{{ route('detail-event', ['id' => $event['id']]) }}"><i class="ti ti-eye"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
             <ul class="pagination justify-content-end mt-3">
