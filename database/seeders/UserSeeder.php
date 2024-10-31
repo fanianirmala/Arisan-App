@@ -15,10 +15,10 @@ class UserSeeder extends Seeder
     {
         User::truncate();
         User::create([
-            'name' => 'nia',
+            'name' => 'Administrator',
             'role' => 'admin',
-            'email' => 'nia@gmail.com',
-            'password' => bcrypt('nia123'),
+            'email' => 'admin@gmail.com',
+            'password' => bcrypt('admin123'),
             'remember_token' => Str::random(60),
         ]);
     }

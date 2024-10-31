@@ -1,0 +1,13 @@
+img{
+    border-radius: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+td {
+    padding: 10px;
+}

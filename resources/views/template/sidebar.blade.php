@@ -9,8 +9,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.css">
     <link rel="stylesheet" href="css/sidebar.css">
-    <title>Sidebar</title>
+    <title>ARUMI</title>
 </head>
 <body>
     <div class="wrapper">
@@ -23,7 +25,7 @@
                 {{-- sidebar navigation --}}
                 <ul class="sidebar-nav">
                     <li class="sidebar-item">
-                        <a href="{{ route('home') }}" class="sidebar-link">
+                        <a href="{{ route('list-arisan') }}" class="sidebar-link">
                             <i class="ti ti-list-details" style="color: #858585"></i>
                             Event Arisan
                         </a>
@@ -53,7 +55,7 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="{{ route('data-personal') }}" class="sidebar-link">
+                        <a href="#" class="sidebar-link">
                             <i class="ti ti-rosette-discount-check" style="color: #858585"></i>
                             Verifikasi Penyelenggara
                         </a>
@@ -69,6 +71,7 @@
                 </div>
             </div>
         </aside>
+        
         <!-- Main Component -->
         <div class="main">
             <nav class="navbar navbar-expand px-3 border-bottom d-flex" style="justify-content: space-between;">
@@ -88,7 +91,7 @@
                         <div class="dropdown">
                             <button class="btn dropdown-toggle" type="button" id="dropdownProfile" data-bs-toggle="dropdown" aria-expanded="false"></button>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownProfile">
-                                <li><a class="dropdown-item" href="#">View Profile</a></li>
+                                <li><a class="dropdown-item" href="{{ route('view-profile') }}">View Profile</a></li>
                             </ul>
                         </div>
                     </div>
