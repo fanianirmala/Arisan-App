@@ -12,10 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.css">
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
-<<<<<<< HEAD
-=======
-
->>>>>>> e29a49ddb55abf2f844dff461ca6eaef69f554c9
     <title>ARUMI</title>
 </head>
 <body>
@@ -24,11 +20,7 @@
         <aside id="sidebar">
             <div class="h-100">
                 <div class="sidebar-logo">
-<<<<<<< HEAD
                     <img src="{{ asset('Assets/img/logo-arumi-biru.png') }}" alt="">
-=======
-                    <img src={{asset('Assets/img/logo-arumi-biru.png')}} alt="">
->>>>>>> e29a49ddb55abf2f844dff461ca6eaef69f554c9
                 </div>
                 {{-- sidebar navigation --}}
                 <ul class="sidebar-nav">
