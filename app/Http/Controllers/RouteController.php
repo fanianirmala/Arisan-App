@@ -126,5 +126,48 @@ class RouteController extends Controller
         }
     }
 
+    public function dataDetailUser($id)
+    {
+        $token = session()->get('token');
 
+        if ($token) {
+            $url = config('app.base_url') . "/user/{$id}";
+            $response = Http::withToken($token)->get($url);
+            if ($response->successful()) {
+                $data = $response->json();
+                if (isset($data['data'])) {
+                    $details = $data['data'];
+                    $transactions = $details['transaction'] ?? [];
+                    return view('dataDetailUser', compact('details', 'transactions'));
+                } else {
+                    return back()->with('error', 'Data tidak tersedia dari API.');
+                }
+            } else {
+                return back()->with('error', 'Gagal mengambil data dari API. Status: ' . $response->status());
+            }
+        } else {
+            return redirect('/')->with('error', 'Token tidak tersedia, silakan coba lagi.');
+        }
+    }
+
+    public function deleteEvent($id)
+{
+    $token = Session::get('token'); // Get the token from session
+
+    if ($token) {
+        $url = config('app.base_url') . "/eventArisan/$id";
+        $response = Http::withToken($token)->delete($url);
+
+        if ($response->successful()) {
+            return redirect()->route('list-arisan')->with('success', 'Event Arisan berhasil dihapus.');
+        } else {
+            // Log the error or inspect response details if needed
+            return back()->with('error', 'Gagal menghapus event arisan dari API.');
+        }
+    } else {
+        return redirect('/')->with('error', 'Token tidak tersedia, silakan login lagi.');
+    }
 }
+}
+
+
