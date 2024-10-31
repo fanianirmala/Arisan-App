@@ -53,19 +53,19 @@ tbody td img {
 .status {
     padding: 5px 10px;
     border-radius: 5px;
-    color: white;
+    color: white; /* Warna teks */
 }
 
-.ongoing {
-    background-color: #2ecc71;
+.aktif {
+    background-color: green; /* Warna latar belakang untuk status aktif */
 }
 
-.upcoming {
-    background-color: #3498db;
+.nonaktif {
+    background-color: red; /* Warna latar belakang untuk status nonaktif */
 }
 
-.unavailable {
-    background-color: #e74c3c;
+.pending {
+    background-color: orange; /* Warna latar belakang untuk status pending */
 }
 
 td a {

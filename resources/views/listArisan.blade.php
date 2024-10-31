@@ -8,8 +8,7 @@
         <br>
         <h2><b>Hai @auth {{ Auth::user()->name }}! @endauth
             </b></h2>
-        <small>Event Arisan Baru Telah Dibuka! Jangan sampai ketinggalan kesempatan untuk bergabung di putaran arisan kali ini. Cek detailnya sekarang dan pastikan nama Anda ada di daftar peserta!</small>
-        <br>
+        <p>Event Arisan Baru Telah Dibuka! Jangan sampai ketinggalan kesempatan untuk bergabung di putaran arisan kali ini. Cek detailnya sekarang dan pastikan nama Anda ada di daftar peserta!</p>
         <br>
         <div class="table-container" style="border-radius: 10px">
             <table>
@@ -22,51 +21,27 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($events as $event)
                     <tr>
                         <td>
                             <img src="assets/img/prof.jpg">
-                            <span>Nia’s Fun-Tastic</span>
+                            <span>{{ $event['title'] }}</span>
                         </td>
-                        <td>Nia</td>
-                        <td><span class="status ongoing">Sedang Berlangsung</span></td>
+                        <td>{{ $event['created_by'] ?? 'Tidak diketahui' }}</td>
+                        <td>
+                            <span class="status" style="background-color:orange ; color: white;">
+                                {{ $event['status_arisan'] }}
+                            </span>
+                        </td>
                         <td>
                             <div class="icon d-flex">
                                 <a href="#"><i class="ti ti-edit"></i></a>
                                 <a href="#"><i class="ti ti-trash"></i></a>
-                                <a href="{{ route('detail-event') }}"><i class="ti ti-eye"></i></a>
+                                <a href="{{ route('detail-event', ['id' => $event['id']]) }}"><i class="ti ti-eye"></i></a>
                             </div>
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <img src="assets/img/prof.jpg">
-                            <span>Journey with Fania</span>
-                        </td>
-                        <td>Fania</td>
-                        <td><span class="status upcoming">Akan Berlangsung</span></td>
-                        <td>
-                            <div class="icon d-flex">
-                                <a href="#"><i class="ti ti-edit"></i></a>
-                                <a href="#"><i class="ti ti-trash"></i></a>
-                                <a href="#"><i class="ti ti-eye"></i></a>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="assets/img/prof.jpg">
-                            <span>Wanda's Moments</span>
-                        </td>
-                        <td>Wanda</td>
-                        <td><span class="status unavailable">Tidak Tersedia</span></td>
-                        <td>
-                            <div class="icon d-flex">
-                                <a href="#"><i class="ti ti-edit"></i></a>
-                                <a href="#"><i class="ti ti-trash"></i></a>
-                                <a href="#"><i class="ti ti-eye"></i></a>
-                            </div>
-                        </td>
-                    </tr>
+                @endforeach
                 </tbody>
             </table>
             <ul class="pagination justify-content-end mt-3">

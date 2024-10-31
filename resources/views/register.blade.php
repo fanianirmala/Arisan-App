@@ -21,7 +21,7 @@
                         <h2><b>Sign Up</b></h2>
                         <p>Already have an account? <a href="{{ route('login') }}" style="text-decoration: none;">Sign In</a></p>
                     </div>
-                    <form action="#" method="POST">
+                    <form action="/postregister" method="POST">
                         @csrf
                         <div class="login-input">
                             <input type="text" name="username" required>
