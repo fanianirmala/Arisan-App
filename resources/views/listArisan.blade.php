@@ -38,7 +38,7 @@
                                 <div class="icon d-flex">
                                     <a href="#"><i class="ti ti-edit"></i></a>
                                     <a href="#"><i class="ti ti-trash"></i></a>
-                                    <a href="{{ route('detail-event', ['id' => $event['id']]) }}"><i class="ti ti-eye"></i></a>
+                                    <a href="{{ route('detail-event', $event['id']) }}"><i class="ti ti-eye"></i></a>
                                 </div>
                             </td>
                         </tr>

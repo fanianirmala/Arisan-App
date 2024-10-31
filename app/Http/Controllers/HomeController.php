@@ -29,11 +29,7 @@ class HomeController extends Controller
         }
     }
 
-    public function detailEvent()
-    {
-        return view('detailEventArisan');
-    }
-
+   
     public function create()
     {
         //

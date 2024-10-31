@@ -11,7 +11,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.css">
-    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
     <title>ARUMI</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
         <aside id="sidebar">
             <div class="h-100">
                 <div class="sidebar-logo">
-                    <img src="Assets/img/logo-arumi-biru.png" alt="">
+                    <img src="{{ asset('Assets/img/logo-arumi-biru.png') }}" alt="">
                 </div>
                 {{-- sidebar navigation --}}
                 <ul class="sidebar-nav">
@@ -71,7 +71,7 @@
                 </div>
             </div>
         </aside>
-        
+
         <!-- Main Component -->
         <div class="main">
             <nav class="navbar navbar-expand px-3 border-bottom d-flex" style="justify-content: space-between;">
@@ -87,7 +87,7 @@
                         </h6>
                     </div>
                     <div class="img d-flex">
-                        <img src="Assets/img/profile-user.png" style="width: 40px;">
+                        <img src="{{ asset('Assets/img/profile-user.png') }}" style="width: 40px;">
                         <div class="dropdown">
                             <button class="btn dropdown-toggle" type="button" id="dropdownProfile" data-bs-toggle="dropdown" aria-expanded="false"></button>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownProfile">

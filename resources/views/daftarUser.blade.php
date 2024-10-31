@@ -11,7 +11,7 @@
             <h2><b>Daftar User</b></h2>
         </div>
     </div>
-    <div class="notification d-flex">
+    <div class="notification d-flex" style="width: 100%;">
         <div class="icon">
             <i class="ti ti-alert-triangle-filled"></i>
         </div>
@@ -21,9 +21,9 @@
     </div>
     <div class="pag d-flex">
         <div class="text3 mt-1">
-            <p class="hasil" style="color: #6B6B6B">5 Hasil ditemukan</p>
+            <p class="hasil" style="color: #6B6B6B">{{ count($users) }} Hasil ditemukan</p>
         </div>
-        <div class="input-group mt-1 me-5" style="margin-top:-5rem; display: flex; justify-content: flex-end;">
+        <div class="input-group mt-1 me-4" style="margin-top:-5rem; display: flex; justify-content: flex-end;">
             <div class="form-outline me-2" data-mdb-input-init>
                 <input type="search" id="form1" class="form-control" placeholder="Cari" />
             </div>
@@ -33,7 +33,7 @@
             </button>
         </div>
     </div>
-    <table>
+    <table style="width: 100%;">
         <thead class="table-secondary">
             <tr>
                 <th>Username</th>
@@ -46,15 +46,13 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($users as $index => $user)
+            @foreach ($users as $user)
                 <tr>
                     <td>{{ $user['username'] }}</td>
                     <td>{{ $user['email'] }}</td>
-
-                    <!-- Mengambil data name, ttl, dan jenis kelamin dari $ktpDetails -->
-                    <td>{{ $ktpDetails[$index]['name'] ?? 'Tidak tersedia' }}</td>
-                    <td>{{ $ktpDetails[$index]['ttl'] ?? 'Tidak tersedia' }}</td>
-                    <td>{{ $ktpDetails[$index]['jenis_kelamin'] ?? 'Tidak tersedia' }}</td>
+                    <td>{{ $user['name'] ?? 'Tidak tersedia' }}</td>
+                    <td>{{ $user['ttl'] ?? 'Tidak tersedia' }}</td>
+                    <td>{{ $user['gender'] ?? 'Tidak tersedia' }}</td>
                     <td><span class="status {{ strtolower($user['status']) }}">{{ $user['status'] }}</span></td>
                     <td class="action-cell">
                         <i class="fas fa-ellipsis-v" style="cursor: pointer;" onclick="toggleActionMenu(this)"></i>

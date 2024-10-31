@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
+use Carbon\Carbon;
 
 class RouteController extends Controller
 {
@@ -50,32 +51,80 @@ class RouteController extends Controller
         return view('viewProfile');
     }
 
-    public function detailArisan()
+    public function detailEvent($id)
     {
-            return view('detailEventArisan');
+        $token = Session::get('token'); // Ambil token dari session
+
+        if ($token) {
+            $url = config('app.base_url') . "/eventArisan/{$id}";
+            $response = Http::withToken($token)->get($url);
+
+            if ($response->successful()) {
+                $eventDetail = $response->json()['data']; // data detail arisan
+                $eventDetail['nominal_arisan'] = 'Rp. ' . number_format($eventDetail['nominal_arisan'], 0, ',', '.');
+                return view('detailEventArisan', compact('eventDetail'));
+            } else {
+                return back()->with('error', 'Gagal mengambil detail data arisan dari API.');
+            }
+        } else {
+            return redirect('/')->with('error', 'Token tidak tersedia, silakan login lagi.');
+        }
     }
+
 
     public function daftarUser()
     {
         $token = Session::get('token');
 
         if ($token) {
-            $url = config('app.base_url') . '/user';
+            $userUrl = config('app.base_url') . '/user';
+            $ktpUrl = config('app.base_url') . '/ktpDetail';
 
             try {
-                $response = Http::withToken($token)->get($url);
+                // Ambil data dari endpoint '/user'
+                $userResponse = Http::withToken($token)->get($userUrl);
 
-                if ($response->successful()) {
-                    $users = $response->json()['data'];
+                // Ambil data dari endpoint '/ktpDetail'
+                $ktpResponse = Http::withToken($token)->get($ktpUrl);
+
+                if ($userResponse->successful() && $ktpResponse->successful()) {
+                    $users = $userResponse->json()['data'];
+                    $ktpDetails = $ktpResponse->json()['data'];
+
+                    foreach ($users as &$user) {
+                        $ktpDetail = collect($ktpDetails)->firstWhere('user_id', $user['id']);
+
+                        if ($ktpDetail) {
+                            // Ambil data dari ktpDetail
+                            $user['name'] = $ktpDetail['name'] ?? null;
+
+                            // Format tempat dan tanggal lahir
+                            $birthPlace = $ktpDetail['birth_place'] ?? 'Tidak tersedia';
+                            $birthDate = $ktpDetail['birth_date'] ?? 'Tidak tersedia';
+
+                            // Format TTL (Tempat, Tanggal)
+                            if ($birthDate !== 'Tidak tersedia') {
+                                $formattedDate = Carbon::parse($birthDate)->format('d F Y'); // Format: 01 Maret 2008
+                            } else {
+                                $formattedDate = $birthDate;
+                            }
+                            $user['ttl'] = "$birthPlace, $formattedDate";
+
+                            $user['gender'] = $ktpDetail['gender'] ?? null;
+                        }
+                    }
+
                     return view('daftarUser', compact('users'));
                 } else {
-                    return back()->with('error', 'Gagal mengambil data user dari API.');
+                    return back()->with('error', 'Gagal mengambil data dari API.');
                 }
             } catch (\Exception $e) {
-                return back()->with('error', 'Terjadi kesalahan dalam mengambil data user.');
+                return back()->with('error', 'Terjadi kesalahan dalam mengambil data dari API.');
             }
         } else {
             return redirect('/')->with('error', 'Token tidak tersedia, silakan login lagi.');
         }
     }
+
+
 }

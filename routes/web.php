@@ -10,7 +10,7 @@ Route::post('/postlogin', [LoginController::class, 'postlogin'])->name('postlogi
 Route::get('/register', [RouteController::class, 'register'])->name('register');
 Route::post('/postregister', [RouteController::class, 'postRegister'])->name('post-register');
 Route::get('/home', [HomeController::class, 'listArisan'])->name('list-arisan');
-Route::get('/detail-event', [HomeController::class, 'detailEvent'])->name('detail-event');
+Route::get('/detail-event/{id}', [RouteController::class, 'detailEvent'])->name('detail-event');
 Route::get('/daftar-user', [RouteController::class, 'daftarUser'])->name('daftar-user');
 Route::get('/detail-user', [RouteController::class, 'detailUser'])->name('detail-user');
 Route::get('/event-arisan-baru', [RouteController::class, 'eventArisanBaru'])->name('event-arisan-baru');
