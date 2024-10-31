@@ -72,6 +72,7 @@
                 </div>
             </div>
         </aside>
+        
         <!-- Main Component -->
         <div class="main">
             <nav class="navbar navbar-expand px-3 border-bottom d-flex" style="justify-content: space-between;">

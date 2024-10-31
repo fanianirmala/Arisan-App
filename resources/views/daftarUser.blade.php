@@ -55,7 +55,6 @@
                     <td>{{ $ktpDetails[$index]['name'] ?? 'Tidak tersedia' }}</td>
                     <td>{{ $ktpDetails[$index]['ttl'] ?? 'Tidak tersedia' }}</td>
                     <td>{{ $ktpDetails[$index]['jenis_kelamin'] ?? 'Tidak tersedia' }}</td>
-
                     <td><span class="status {{ strtolower($user['status']) }}">{{ $user['status'] }}</span></td>
                     <td class="action-cell">
                         <i class="fas fa-ellipsis-v" style="cursor: pointer;" onclick="toggleActionMenu(this)"></i>
