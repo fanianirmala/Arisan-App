@@ -61,8 +61,8 @@
                         <i class="fas fa-ellipsis-v" style="cursor: pointer;" onclick="toggleActionMenu(this)"></i>
                         <div class="action-menu">
                             <div class="detail-btn">
-                                <a href="{{ route('data-detail-user') }}" style="text-decoration: none; color: #000;">Detail</a>
-                            </div>
+                                <a href="{{ route('data-detail-user', $user['id']) }}" style="text-decoration: none; color: #000;">Detail</a>
+                            </div>                            
                         </div>
                     </td>
                 </tr>

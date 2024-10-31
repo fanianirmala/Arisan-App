@@ -1,5 +1,15 @@
 @extends('template.sidebar')
 @section('content')
+@if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+    @if(session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif
     <link rel="stylesheet" href="css/listArisan.css">
 
     <body>
@@ -24,26 +34,33 @@
                     @foreach ($events as $event)
                         <tr>
                             <td>
-                                <img src="assets/img/prof.jpg">
+                                <img src="{{ asset('assets/img/prof.jpg') }}">
                                 <span>{{ $event['title'] }}</span>
                             </td>
                             <td>{{ $event['created_by'] ?? 'Tidak diketahui' }}</td>
                             <td>
-                                <span class="status {{ strtolower($event['status_arisan']) }}">
-                                <span class="status" style="background-color:orange ; color: white;">
+                                <span class="status" style="background-color: orange; color: white;">
                                     {{ $event['status_arisan'] }}
                                 </span>
                             </td>
                             <td>
                                 <div class="icon d-flex">
                                     <a href="#"><i class="ti ti-edit"></i></a>
-                                    <a href="#"><i class="ti ti-trash"></i></a>
                                     <a href="{{ route('detail-event', ['id' => $event['id']]) }}"><i class="ti ti-eye"></i></a>
+                
+                                    <!-- Delete Button -->
+                                    <form action="{{ route('delete-event', $event['id']) }}" method="POST" style="display:inline;">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" style="background: none; border: none;">
+                                            <i class="ti ti-trash" style="color: red;"></i>
+                                        </button>
+                                    </form>
                                 </div>
                             </td>
                         </tr>
                     @endforeach
-                </tbody>
+                </tbody>                
             </table>
             <ul class="pagination justify-content-end mt-3">
                 <li class="page-item disabled">

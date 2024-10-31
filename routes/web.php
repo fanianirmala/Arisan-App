@@ -14,5 +14,6 @@ Route::get('/detail-event', [HomeController::class, 'detailEvent'])->name('detai
 Route::get('/daftar-user', [RouteController::class, 'daftarUser'])->name('daftar-user');
 Route::get('/detail-user', [RouteController::class, 'detailUser'])->name('detail-user');
 Route::get('/event-arisan-baru', [RouteController::class, 'eventArisanBaru'])->name('event-arisan-baru');
-Route::get('/data-detail-user', [RouteController::class, 'dataDetailUser'])->name('data-detail-user');
+Route::get('/data-detail-user/{id}', [RouteController::class, 'dataDetailUser'])->name('data-detail-user');
 Route::get('/view-profile', [RouteController::class, 'viewProfile'])->name('view-profile');
+Route::delete('/eventArisan/{id}', [RouteController::class, 'deleteEvent'])->name('delete-event');
