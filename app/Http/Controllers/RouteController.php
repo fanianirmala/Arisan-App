@@ -57,38 +57,26 @@ class RouteController extends Controller
     }
 
     public function daftarUser()
-{
-    $token = Session::get('token');
-
-    if ($token) {
-        $url = config('app.base_url') . '/user';
-
-        try {
-            $response = Http::withToken($token)->get($url);
-
-            if ($response->successful()) {
-                $users = $response->json()['data'];
-                return view('daftarUser', compact('users'));
-            } else {
-                return back()->with('error', 'Gagal mengambil data user dari API.');
-            }
-        } catch (\Exception $e) {
-            return back()->with('error', 'Terjadi kesalahan dalam mengambil data user.');
-        }
-    } else {
-        return redirect('/')->with('error', 'Token tidak tersedia, silakan login lagi.');
-    }
-}
-
-
-
-    public function dataDetailUser()
     {
-        return view('dataDetailUser');
-    }
+        $token = Session::get('token');
 
-    // public function detailUser()
-    // {
-    //     return view('dataDetailUser');
-    // }
+        if ($token) {
+            $url = config('app.base_url') . '/user';
+
+            try {
+                $response = Http::withToken($token)->get($url);
+
+                if ($response->successful()) {
+                    $users = $response->json()['data'];
+                    return view('daftarUser', compact('users'));
+                } else {
+                    return back()->with('error', 'Gagal mengambil data user dari API.');
+                }
+            } catch (\Exception $e) {
+                return back()->with('error', 'Terjadi kesalahan dalam mengambil data user.');
+            }
+        } else {
+            return redirect('/')->with('error', 'Token tidak tersedia, silakan login lagi.');
+        }
+    }
 }

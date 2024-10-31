@@ -47,26 +47,26 @@
         </thead>
         <tbody>
             @foreach ($users as $index => $user)
-            <tr>
-                <td>{{ $user['username'] }}</td>
-                <td>{{ $user['email'] }}</td>
+                <tr>
+                    <td>{{ $user['username'] }}</td>
+                    <td>{{ $user['email'] }}</td>
 
-                <!-- Mengambil data name, ttl, dan jenis kelamin dari $ktpDetails -->
-                <td>{{ $ktpDetails[$index]['name'] ?? 'Tidak tersedia' }}</td>
-                <td>{{ $ktpDetails[$index]['ttl'] ?? 'Tidak tersedia' }}</td>
-                <td>{{ $ktpDetails[$index]['jenis_kelamin'] ?? 'Tidak tersedia' }}</td>
+                    <!-- Mengambil data name, ttl, dan jenis kelamin dari $ktpDetails -->
+                    <td>{{ $ktpDetails[$index]['name'] ?? 'Tidak tersedia' }}</td>
+                    <td>{{ $ktpDetails[$index]['ttl'] ?? 'Tidak tersedia' }}</td>
+                    <td>{{ $ktpDetails[$index]['jenis_kelamin'] ?? 'Tidak tersedia' }}</td>
 
-                <td><span class="status {{ strtolower($user['status']) }}">{{ $user['status'] }}</span></td>
-                <td class="action-cell">
-                    <i class="fas fa-ellipsis-v" style="cursor: pointer;" onclick="toggleActionMenu(this)"></i>
-                    <div class="action-menu">
-                        <div class="detail-btn">
-                            <a href="{{ route('data-detail-user') }}" style="text-decoration: none; color: #000;">Detail</a>
+                    <td><span class="status {{ strtolower($user['status']) }}">{{ $user['status'] }}</span></td>
+                    <td class="action-cell">
+                        <i class="fas fa-ellipsis-v" style="cursor: pointer;" onclick="toggleActionMenu(this)"></i>
+                        <div class="action-menu">
+                            <div class="detail-btn">
+                                <a href="{{ route('data-detail-user') }}" style="text-decoration: none; color: #000;">Detail</a>
+                            </div>
                         </div>
-                    </div>
-                </td>
-            </tr>
-        @endforeach
+                    </td>
+                </tr>
+            @endforeach
         </tbody>
     </table>
     <script>

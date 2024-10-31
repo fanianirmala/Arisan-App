@@ -16,7 +16,14 @@ class LoginController extends Controller
         return view('login');
     }
 
-    public function postlogin(Request $request){
+    public function postlogin(Request $request)
+    {
+        // Validasi input
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
         // Validasi input
         $request->validate([
             'email' => 'required|email',
@@ -29,8 +36,8 @@ class LoginController extends Controller
             'password' => $request->password,
         ];
 
+        // URL endpoint login di API Express
         $url = config('app.base_url') . '/login';
-
         try {
             // Mengirim POST request ke API Express
             $response = Http::post($url, $credentials);
