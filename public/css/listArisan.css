@@ -53,20 +53,39 @@ tbody td img {
 .status {
     padding: 5px 10px;
     border-radius: 5px;
-    color: white;
+    color: red;
 }
 
 .ongoing {
     background-color: #2ecc71;
 }
 
-.upcoming {
+.comingsoon {
     background-color: #3498db;
 }
 
 .unavailable {
     background-color: #e74c3c;
 }
+
+/* .status  {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--status-color);
+}
+
+.ongoing {
+    --status-color: #2ecc71;
+}
+
+.upcoming {
+    --status-color: #3 498db;
+}
+
+.unavailable {
+    --status-color: #e74c3c;
+} */
 
 td a {
     text-decoration: none;
@@ -106,11 +125,10 @@ td a img {
 
 @media (max-width: 768px) {
     .table-container {
-        width: 100%; 
+        width: 100%;
     }
 
     table {
         font-size: 14px;
     }
 }
-

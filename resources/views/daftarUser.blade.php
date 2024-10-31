@@ -46,70 +46,27 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($users as $index => $user)
             <tr>
-                <td>Username One</td>
-                <td>email.com</td>
-                <td>Nama One<br>126278392013</td>
-                <td>2 Agustus 2002<br>Depok</td>
-                <td>Laki-laki</td>
-                <td><span class="status registered">Terdaftar</span></td>
+                <td>{{ $user['username'] }}</td>
+                <td>{{ $user['email'] }}</td>
+
+                <!-- Mengambil data name, ttl, dan jenis kelamin dari $ktpDetails -->
+                <td>{{ $ktpDetails[$index]['name'] ?? 'Tidak tersedia' }}</td>
+                <td>{{ $ktpDetails[$index]['ttl'] ?? 'Tidak tersedia' }}</td>
+                <td>{{ $ktpDetails[$index]['jenis_kelamin'] ?? 'Tidak tersedia' }}</td>
+
+                <td><span class="status {{ strtolower($user['status']) }}">{{ $user['status'] }}</span></td>
                 <td class="action-cell">
                     <i class="fas fa-ellipsis-v" style="cursor: pointer;" onclick="toggleActionMenu(this)"></i>
                     <div class="action-menu">
                         <div class="detail-btn">
-                            <a href="{{ route('data-detail-user') }}">Detail</a>
+                            <a href="{{ route('data-detail-user') }}" style="text-decoration: none; color: #000;">Detail</a>
                         </div>
                     </div>
                 </td>
             </tr>
-            <tr>
-                <td>Username Two</td>
-                <td>email.com</td>
-                <td>Nama Two<br>126278392013</td>
-                <td>2 Agustus 2002<br>Depok</td>
-                <td>Laki-laki</td>
-                <td><span class="status registered">Terdaftar</span></td>
-                <td class="action-cell">
-                    <i class="fas fa-ellipsis-v" style="cursor: pointer;" onclick="toggleActionMenu(this)"></i>
-                    <div class="action-menu">
-                        <div class="detail-btn">
-                            Detail
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Username Three</td>
-                <td>email.com</td>
-                <td>Nama Three<br>126278392013</td>
-                <td>2 Agustus 2002<br>Depok</td>
-                <td>Laki-laki</td>
-                <td><span class="status declined">Ditolak</span></td>
-                <td class="action-cell">
-                    <i class="fas fa-ellipsis-v" style="cursor: pointer;" onclick="toggleActionMenu(this)"></i>
-                    <div class="action-menu">
-                        <div class="detail-btn">
-                            Detail
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Username Five</td>
-                <td>email.com</td>
-                <td>Nama Five<br>126278392013</td>
-                <td>2 Agustus 2002<br>Depok</td>
-                <td>Laki-laki</td>
-                <td><span class="status action-needed">Butuh Tindakan</span></td>
-                <td class="action-cell">
-                    <i class="fas fa-ellipsis-v" style="cursor: pointer;" onclick="toggleActionMenu(this)"></i>
-                    <div class="action-menu">
-                        <div class="detail-btn">
-                            Detail
-                        </div>
-                    </div>
-                </td>
-            </tr>
+        @endforeach
         </tbody>
     </table>
     <script>
